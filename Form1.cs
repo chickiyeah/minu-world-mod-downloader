@@ -26,13 +26,13 @@ namespace WinFormsApp1
             Form1.path = this.textBox1.Text;
             if (Form1.path == "")
             {
-                MessageBox.Show("°æ·Î´Â °ø¹éÀÏ¼ö ¾ø½À´Ï´Ù!", "°æ·Î ¿À·ù!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                MessageBox.Show("ï¿½ï¿½Î´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½!", "ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
             else if (!new DirectoryInfo(path).Exists)
             {
-                MessageBox.Show("°æ·Î°¡ ¿Ã¹Ù¸£Áö ¾Ê½À´Ï´Ù!", "°æ·Î ¿À·ù!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                MessageBox.Show("ï¿½ï¿½Î°ï¿½ ï¿½Ã¹Ù¸ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½!", "ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
-            else if (MessageBox.Show(string.Concat("ÀÌ °æ·Î°¡ ¸Â³ª¿ä?\n", Form1.path), "°æ·Î È®ÀÎ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            else if (MessageBox.Show(string.Concat("ï¿½ï¿½ ï¿½ï¿½Î°ï¿½ ï¿½Â³ï¿½ï¿½ï¿½?\n", Form1.path), "ï¿½ï¿½ï¿½ È®ï¿½ï¿½", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 new Form2().Show();
                 base.Hide();
@@ -41,7 +41,7 @@ namespace WinFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Á¤¸» ¸ðµç ¼³Ä¡¸¦ Ãë¼ÒÇÏ°í Á¾·áÇÏ½Ã°Ú½À´Ï±î?", "¼³Ä¡ Ãë¼Ò", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½Ã°Ú½ï¿½ï¿½Ï±ï¿½?", "ï¿½ï¿½Ä¡ ï¿½ï¿½ï¿½", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 base.Close();
             }
