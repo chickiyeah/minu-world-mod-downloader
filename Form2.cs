@@ -61,7 +61,7 @@ namespace WinFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             this.Forgedownload(" https://maven.minecraftforge.net/net/minecraftforge/forge/1.16.4-35.1.36/forge-1.16.4-35.1.36-installer.jar", "forge");
-            this.progressBar2.Maximum = 21;        
+            this.progressBar2.Maximum = 22;        
             this.button1.Enabled = false;
             this.checkBox1.Enabled = false;
             mmap = false;
