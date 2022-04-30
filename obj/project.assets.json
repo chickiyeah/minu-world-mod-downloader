@@ -961,19 +961,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nkw\\.nuget\\packages\\": {}
+    "C:\\Users\\lk\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nkw\\source\\repos\\WinFormsApp1\\WinFormsApp1\\미누세상 모드 설치기.csproj",
+      "projectUniqueName": "C:\\Users\\lk\\Documents\\GitHub\\minu-world-mod-downloader\\미누세상 모드 설치기.csproj",
       "projectName": "미누세상 모드 설치기",
-      "projectPath": "C:\\Users\\nkw\\source\\repos\\WinFormsApp1\\WinFormsApp1\\미누세상 모드 설치기.csproj",
-      "packagesPath": "C:\\Users\\nkw\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nkw\\source\\repos\\WinFormsApp1\\WinFormsApp1\\obj\\",
+      "projectPath": "C:\\Users\\lk\\Documents\\GitHub\\minu-world-mod-downloader\\미누세상 모드 설치기.csproj",
+      "packagesPath": "C:\\Users\\lk\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lk\\Documents\\GitHub\\minu-world-mod-downloader\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\nkw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1022,7 +1027,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
