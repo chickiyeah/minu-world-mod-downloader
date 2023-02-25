@@ -26,13 +26,13 @@ namespace WinFormsApp1
             Form1.path = this.textBox1.Text;
             if (Form1.path == "")
             {
-                MessageBox.Show("��δ� �����ϼ� �����ϴ�!", "��� ����!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                MessageBox.Show("이 경로에 모드를 설치할수 없습니다!", "설치 위치를 선택해주세요!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
             else if (!new DirectoryInfo(path).Exists)
             {
-                MessageBox.Show("��ΰ� �ùٸ��� �ʽ��ϴ�!", "��� ����!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                MessageBox.Show("이 경로에 모드를 설치할 수 없습니다!", "이경로는 존재하지 않습니다!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
-            else if (MessageBox.Show(string.Concat("�� ��ΰ� �³���?\n", Form1.path), "��� Ȯ��", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            else if (MessageBox.Show(string.Concat("이 경로가 맞나요?\n", Form1.path), "여기에 설치하시겠습니까?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 new Form2().Show();
                 base.Hide();
@@ -41,9 +41,9 @@ namespace WinFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("���� ��� ��ġ�� ����ϰ� �����Ͻðڽ��ϱ�?", "��ġ ���", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("정말 설치를 취소하시겠어요?", "설치를 취소하시겠습니까?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                base.Close();
+                Close();
             }
         }
 
@@ -72,6 +72,11 @@ namespace WinFormsApp1
                     directoryInfo.Create();
                 }
             }
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

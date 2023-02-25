@@ -3,13 +3,16 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO.Compression;
 using System.Linq;
 using System.Net;
 using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace WinFormsApp1
 {
@@ -36,8 +39,8 @@ namespace WinFormsApp1
             webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(this.DownloadProgressCallback4);
             webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(DownloadCompletdCallback1);
             Uri uri = new Uri(url);
-            this.label5.Text = string.Concat(Form1.path, "\\", name, ".jar");
-            webClient.DownloadFileAsync(uri, string.Concat(Form1.path, "\\", name, ".jar"));
+            this.label5.Text = string.Concat(Form1.path, "\\", name, ".zip");
+            webClient.DownloadFileAsync(uri, string.Concat(Form1.path, "\\", name, ".zip"));
         }
         private async void Forgedownload(string url, string name)
         {
@@ -60,10 +63,9 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Forgedownload(" https://maven.minecraftforge.net/net/minecraftforge/forge/1.16.4-35.1.36/forge-1.16.4-35.1.36-installer.jar", "forge");
-            this.progressBar2.Maximum = 21;        
+            this.Forgedownload(" https://maven.minecraftforge.net/net/minecraftforge/forge/1.16.5-36.2.34/forge-1.16.5-36.2.34-installer.jar", "forge");
+            this.progressBar2.Maximum = 4;
             this.button1.Enabled = false;
-            this.checkBox1.Enabled = false;
             mmap = false;
         }
 
@@ -102,106 +104,25 @@ namespace WinFormsApp1
                 }
                 else
                 {
-                    this.Textdownload(" https://drive.google.com/uc?export=download&id=1EST5NhuKurGkyK6Zvb-iUFWMgp5_WXx8", "옵티파인미설치");
+                    this.Textdownload(" https://drive.google.com/uc?export=download&id=1EST5NhuKurGkyK6Zvb-iUFWMgp5_WXx8", "null");
                 }
             }
             if (this.progressBar2.Value == 2)
             {
-                this.Filedownload(" https://drive.google.com/uc?export=download&id=1fhfDDfmx3CSw9ZultynRH9X5SaT2FOVb", "AI");
+                this.Filedownload("https://drive.google.com/uc?export=download&id=1CLCWdwwJTxYWmrxI-E6EPMDtmMpH-FXf&confirm=t&uuid=a3b456bf-f34b-4bde-b8f9-5bcfcd03d0db&at=ALgDtszqSv5Ji_mpIbFDYgpx7nJi:1677318704827", "modzip");
             }
             if (this.progressBar2.Value == 3)
             {
-                this.Filedownload(" https://drive.google.com/uc?export=download&id=1qDQw1Z32z_E2UiEq_3-v5Sww_S7W2RsX", "freeitecore");
+                this.label5.Text = "압축 해제중 입니다.";
+                ZipFile.ExtractToDirectory(string.Concat(Form1.path, "\\", "modzip.zip"), string.Concat(Form1.path), true);
+                value.Value = value.Value + 1;
+                if(MessageBox.Show("확인을 눌러 프로그램을 종료합니다!", "모드 설치가 완료되었습니다!", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+                {
+                    Process.GetCurrentProcess().Kill();
+                }
+                
+                
             }
-            if (this.progressBar2.Value == 4)
-            {
-                this.Filedownload(" https://drive.google.com/uc?export=download&id=1VAeQQrcwAkogv6huwwI2KyxerO5excD8", "DataFixerslayer");
-            }
-            if (this.progressBar2.Value == 5)
-            {
-                this.Filedownload(" https://drive.google.com/uc?export=download&id=1wCnAwlbSrnIPEuqFT50ycI2B-k-05Vpr", "foodextend");
-            }
-            if (this.progressBar2.Value == 6)
-            {
-                this.Filedownload(" https://drive.google.com/uc?export=download&id=1wRDZTWYH4RQRai2zMtg-pXdHl_Jbo6ig", "trees");
-            }
-            if (this.progressBar2.Value == 7)
-            {
-                this.Filedownload(" https://drive.google.com/uc?export=download&id=11T8vq8b7RasldA-BXhW6UwOcbEX75K9G", "crops");
-            }
-            if (this.progressBar2.Value == 8)
-            {
-                this.Filedownload(" https://drive.google.com/uc?export=download&id=1wMe4vSZwcO9ocJ9IV_iZKwcdZYdZPhi9", "foodcore");
-            }
-            if (this.progressBar2.Value == 9)
-            {
-                this.Filedownload(" https://drive.google.com/uc?export=download&id=14zj61hbBdP9QmQ5YBKNxRn7howLzNqzC", "Furniture");
-            }
-            if (this.progressBar2.Value == 10)
-            {
-                this.Filedownload(" https://drive.google.com/uc?export=download&id=1dpxBDLvTv4LMxjrShhnDdVl90koXKYBP", "placebo");
-            }
-            if (this.progressBar2.Value == 11)
-            {
-                this.Filedownload(" https://drive.google.com/uc?export=download&id=1EZJWe25GDxj5ejfvapy2TxBSIL9vHx0X", "FastFurnace");
-            }
-            if (this.progressBar2.Value == 12)
-            {
-                this.Filedownload(" https://drive.google.com/uc?export=download&id=1bgfNA1bn3xtKe1FwHpSihVYLR6J5GzEn", "Architectury");
-            }
-            if (this.progressBar2.Value == 13)
-            {
-                this.Filedownload(" https://drive.google.com/uc?export=download&id=1w23wBsesxW7_e3bhA-_ZvPxhnaTSdpjN", "FTB-GUI-LIBRARY");
-            }
-            if (this.progressBar2.Value == 14)
-            {
-                this.Filedownload(" https://drive.google.com/uc?export=download&id=1Ugt4NZgpE_HsewkBBjEykkLBJNKvM2Zt", "JEI");
-            }
-            if (this.progressBar2.Value == 15)
-            {
-                this.Filedownload(" https://drive.google.com/uc?export=download&id=1xzvTMa0tQOqtEgqfIQRiISpkbEz4wPR5", "Marketbasket");
-            }
-            if (this.progressBar2.Value == 16)
-            {
-                this.Filedownload(" https://drive.google.com/uc?export=download&id=1WwWDKWCT4fo6tz9vwSAGMUiWBSOHxcnb", "MCW-Bridges");
-            }
-            if (this.progressBar2.Value == 17)
-            {
-                this.Filedownload(" https://drive.google.com/uc?export=download&id=1XDuDZbE16HiK5ISVi4SchA3HNSGI9zNE", "Buildersedtions");
-            }
-            if (this.progressBar2.Value == 18)
-            {
-                this.Filedownload(" https://drive.google.com/uc?export=download&id=166oWi7xHQCQJYgI7f_smrrpi5c1pjNbK", "Carry-On");
-            }
-            if (this.progressBar2.Value == 19)
-            {
-                this.Filedownload(" https://drive.google.com/uc?export=download&id=1oBM-Gq5gAZUUUQdJBBLo0Zu2qYd88ro0", "shetiphiancore");
-            }
-            if (this.progressBar2.Value == 20)
-            {
-                this.Filedownload(" https://drive.google.com/uc?export=download&id=1OJO6TLT57DdncupG50OO-8GFutxbCL_F", "Multi-Beds");
-            }
-            if (this.progressBar2.Value == 21)
-            {
-                this.Filedownload(" https://drive.google.com/uc?export=download&id=1G7ZyDbNu9PTWtqz0wUhumPKzveDZdm6C", "Cooking");
-            }
-            if (this.progressBar2.Value == 22)
-            {
-                MessageBox.Show("모든 다운로드를 완료했습니다!\n본 프로그램을 종료해도 좋습니다!", "다운로드 완료", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox1.Checked)
-            {
-                opti = true;
-            }
-            else
-            {
-                opti = false;
-            }
-            
         }
     }
 }

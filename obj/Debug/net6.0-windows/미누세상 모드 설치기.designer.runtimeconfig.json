@@ -11,8 +11,12 @@
         "version": "6.0.0"
       }
     ],
+    "additionalProbingPaths": [
+      "C:\\Users\\ruddl\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\ruddl\\.nuget\\packages"
+    ],
     "configProperties": {
-      "System.Reflection.Metadata.MetadataUpdater.IsSupported": false
+      "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
     }
   }
 }

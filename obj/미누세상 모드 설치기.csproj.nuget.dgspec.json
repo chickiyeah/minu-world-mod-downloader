@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nkw\\source\\repos\\WinFormsApp1\\WinFormsApp1\\미누세상 모드 설치기.csproj": {}
+    "F:\\minu-world-mod-downloader\\미누세상 모드 설치기.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nkw\\source\\repos\\WinFormsApp1\\WinFormsApp1\\미누세상 모드 설치기.csproj": {
+    "F:\\minu-world-mod-downloader\\미누세상 모드 설치기.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nkw\\source\\repos\\WinFormsApp1\\WinFormsApp1\\미누세상 모드 설치기.csproj",
+        "projectUniqueName": "F:\\minu-world-mod-downloader\\미누세상 모드 설치기.csproj",
         "projectName": "미누세상 모드 설치기",
-        "projectPath": "C:\\Users\\nkw\\source\\repos\\WinFormsApp1\\WinFormsApp1\\미누세상 모드 설치기.csproj",
-        "packagesPath": "C:\\Users\\nkw\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nkw\\source\\repos\\WinFormsApp1\\WinFormsApp1\\obj\\",
+        "projectPath": "F:\\minu-world-mod-downloader\\미누세상 모드 설치기.csproj",
+        "packagesPath": "C:\\Users\\ruddl\\.nuget\\packages\\",
+        "outputPath": "F:\\minu-world-mod-downloader\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nkw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ruddl\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows7.0"
+          "net6.0-windows"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -51,7 +51,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -63,7 +64,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
